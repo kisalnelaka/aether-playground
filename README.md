@@ -7,7 +7,7 @@
 A production-quality interactive web platform and architectural showcase for the **AETHER PHP framework**. This repository contains the source code for the fully static frontend visualization of AETHER's runtime mechanics.
 
 ## 🌐 Live Demo
-**[Launch AETHER Playground](https://kisalnelaka.github.io/aether)**
+**[Launch AETHER Playground](https://kisalnelaka.github.io/aether-playground)**
 
 ## 🚀 About AETHER
 AETHER is a modern, high-performance "Persistent Memory PHP" runtime built for maximum throughput and zero bootstrap overhead. It reimagines traditional PHP request life-cycles using persistent worker fibers and AOT (Ahead-Of-Time) kernel initialization.
