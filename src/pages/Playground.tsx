@@ -23,8 +23,7 @@ Route::get('/users/{id}', function ($id) {
     
     return response()->json([
         'status' => 'success',
-        'data' => $user,
-        'execution_time' => '0.001ms'
+        'data' => $user
     ]);
 });
 
@@ -62,8 +61,7 @@ Route::get('/users/{id}', function ($id) {
     
     return response()->json([
         'status' => 'success',
-        'data' => $user,
-        'execution_time' => '45.2ms'
+        'data' => $user
     ]);
 });
 `,
@@ -95,8 +93,7 @@ app.get('/users/:id', async (req, res) => {
     
     res.json({
         status: 'success',
-        data: user,
-        execution_time: '2.4ms'
+        data: user
     });
 });
 `,
@@ -126,8 +123,7 @@ def get_user(request, id):
     
     return JsonResponse({
         'status': 'success',
-        'data': { 'id': user.id, 'name': user.name },
-        'execution_time': '28.5ms'
+        'data': { 'id': user.id, 'name': user.name }
     })
 
 urlpatterns = [
@@ -193,6 +189,15 @@ export function Playground() {
   return (
     <div className="flex-1 flex flex-col h-[calc(100vh-4rem)] bg-background">
       
+      {/* Demo Disclaimer */}
+      <div className="bg-primary/10 border-b border-primary/20 px-4 py-1.5 text-[11px] font-mono text-primary text-center tracking-wide flex items-center justify-center space-x-2 shrink-0">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+        </span>
+        <span>INTERACTIVE SIMULATION: This playground visually demonstrates architectural differences and execution models. It is a frontend simulation, not a live backend compiler.</span>
+      </div>
+
       {/* Framework Tabs */}
       <div className="h-14 border-b border-white/10 bg-surface flex items-center px-4 space-x-2 shrink-0 overflow-x-auto">
         {(Object.keys(frameworks) as FrameworkKey[]).map(key => (
