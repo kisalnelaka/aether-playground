@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Editor from '@monaco-editor/react';
 import { motion } from 'framer-motion';
-import { Play, RotateCcw, Box, Cpu, Database, Server, Layers } from 'lucide-react';
+import { Play, RotateCcw, Cpu, Server, Layers } from 'lucide-react';
 
 const frameworks = {
   aether: {

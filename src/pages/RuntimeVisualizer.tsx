@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Network, Server, Zap, Repeat } from 'lucide-react';
+import { Network, Zap, Repeat } from 'lucide-react';
 
 const DiagramCard = ({ title, icon: Icon, children }: { title: string, icon: any, children: React.ReactNode }) => (
   <div className="glass-card p-6 relative overflow-hidden group mb-8">
@@ -52,7 +52,7 @@ export function RuntimeVisualizer() {
             rightTitle="AETHER Runtime"
             leftContent={
               <div className="flex flex-col space-y-3 w-full max-w-xs text-xs font-mono">
-                {['Bootstrap Kernel', 'Load Configuration', 'Connect Database', 'Execute Route', 'Garbage Collection'].map((step, i) => (
+                {['Bootstrap Kernel', 'Load Configuration', 'Connect Database', 'Execute Route', 'Garbage Collection'].map((step) => (
                   <div key={step} className="px-3 py-2 border border-red-500/30 bg-red-500/5 text-muted flex items-center justify-between">
                     <span>{step}</span>
                     <span className="text-red-400 opacity-50">Block</span>
@@ -69,7 +69,7 @@ export function RuntimeVisualizer() {
                   animate={{ width: "calc(100% - 32px)" }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
                 />
-                {['Socket', 'Router', 'Fiber', 'Response'].map((step, i) => (
+                {['Socket', 'Router', 'Fiber', 'Response'].map((step) => (
                   <div key={step} className="flex flex-col items-center">
                     <div className="w-6 h-6 rounded bg-surface border border-primary/50 flex items-center justify-center mb-2 z-10">
                       <div className="w-1.5 h-1.5 bg-primary" />
